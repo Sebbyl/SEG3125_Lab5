@@ -117,7 +117,7 @@
         <form id = "infoForm">
         <div class = "row  py-3">
             <div class = "col text-center border-end border-2">
-                <h4 >Please Choose the Type of Appointment you want <span style = "color: red;">*</span> </h4>
+                <h4><img src = "medical-appointment.png" style = "width: 40px;height:40px;">Appointment Type <span style = "color: red;">*</span> </h4>
                 <div class = "btn-group-vertical my-3" role = "group" >
                     <input type = "checkbox" class = "btn-check" id = "btnCheck1" autocomplete="off" >
                     <label for = "btnCheck1" class = "btn btn-outline-primary">Cyst Removal ($200)</label>
@@ -134,7 +134,8 @@
                     <input type = "checkbox" class = "btn-check" id = "btnCheck5" autocomplete="off" >
                     <label for = "btnCheck5" class = "btn btn-outline-primary">Dentistry ($250)</label>
                 </div>
-                <h4>Please Choose the Doctor you'd Prefer (optional)</h4>
+
+                <h4><img src = "stethoscope.png" style = "width: 40px;height:40px;">Preferred Doctor (optional)</h4>
                 <div class = "btn-group-vertical my-3" role = "group">
                     <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio0" value = "none" checked>
                     <label for = "btnradio0" class = "btn btn-outline-primary">Any</label>
@@ -152,7 +153,7 @@
                
             </div>
             <div class = "col">
-                <h4>Contact Information</h4>
+                <h4><img src = "cv.png" style = "width: 40px;height:40px;">Contact Information</h4>
                 
                     <div class = "mb-3">
                         <p>
@@ -164,11 +165,11 @@
                         <input type  ="text" class = "form-control" id = "lastName" name = "info2" required>
                     </p>
                     <p>
-                        <label for = "email" class = "form-label">Email</label><span style = "color: red;">*</span>
+                       <label for = "email" class = "form-label">Email</label><span style = "color: red;">*</span>
                         <input type  ="email" class = "form-control" id = "email" name = "info3" required>
                     </p>
                     <p>
-                        <label for = "phoneNumber" class = "form-label">Phone Number</label><span style = "color: red;">*</span>
+                        <img id = "paymentTT"src = "Information.png" style = "width:21px;height:21px;"  class = "float-start" data-bs-toggle = "tooltip" title="Format: (xxx) xxx-xxxx"><label for = "phoneNumber" class = "form-label">Phone Number</label><span style = "color: red;">*</span>
                         <input type = "text" class = "form-control" id = "phoneNumber" name = "info4" required>
                         <span style = "visibility: hidden; color:red;" id = "phoneError" >This is not a valid phone Number!</span>
                     </p>
@@ -195,7 +196,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Please enter the following information for payment</h5>
+              <h5 class="modal-title" id="exampleModalLabel"><img src = "credit-card.png" style = "width: 40px;height:40px;">   Payment Information</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-start">
@@ -214,12 +215,12 @@
                 <input type  ="text" class = "form-control" id = "fullName" name = "card1" required>
             </p>
              <p>
-                <label for = "cNumber" class = "form-label">Card Number </label><img id = "cvvTT"src = "Information.png" style = "width:15px;height:15px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 16 digit number on the front of your card"><span style = "color: red;">*</span>
+                <label for = "cNumber" class = "form-label">Card Number </label><img id = "cvvTT"src = "Information.png" style = "width:21px;height:21px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 16 digit number on the front of your card"><span style = "color: red;">*</span>
                 <input type  ="number" class = "form-control" id = "cardNum" maxlength="16" name = "card2" required>
                 <span style = "visibility: hidden; color:red;" id = "cardError" >This is not a valid credit card number!</span>
             </p>
             <p>
-                <label for = "CVV" class = "form-label">CVV </label><img id = "cvvTT"src = "Information.png" style = "width:15px;height:15px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 3 digit number on the back of your card"><span style = "color: red;">*</span>
+                <label for = "CVV" class = "form-label">CVV </label><img id = "cvvTT"src = "Information.png" style = "width:21px;height:21px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 3 digit number on the back of your card"><span style = "color: red;">*</span>
                 <input type  ="number" class = "form-control" id = "CVV" name = "card3" required>
                 <span style = "visibility: hidden; color:red;" id = "cvvError" >This is not a valid CVV!</span>
             </p>
@@ -273,4 +274,6 @@
     <script src = "script.js"></script>
    
   </body>
+  
 </html>
+
