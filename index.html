@@ -7,22 +7,27 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href = "https://trentrichardson.com/examples/timepicker/jquery-ui-timepicker-addon.css" rel = "stylesheet">
     <style>
         
     </style>
     <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src = "https://trentrichardson.com/examples/timepicker/jquery-ui-timepicker-addon.js"></script>
+  
   </head>
   <body>
    
     <div class = "container-fluid text-center p-3 border-bottom border-5" style = "font-family: 'Times New Roman', serif; font-weight: bold; background-color: lightblue;">
-        <h1>Pretty Veterinary clinic</h1>
+        <h1>Pretty Veterinary Clinic</h1>
         <p>567 Vet Street, Ottawa, Ontario ∙ (613)743-9432</p>
+        <p><i>Open 24/7!</i></p>
     </div>
     <div class = "container-fluid bg-info">
     <div class = "container text-center mt-3 border border-2 border-success rounded-3 bg-white my-3">
@@ -30,28 +35,50 @@
             <table class = "table">
                 <thead>
                     <tr>
-                        <th>Services we Offer</th>
+                        <th><h3>Services We Offer</h3></th>
                     </tr>
                 </thead>
                 <tbody >
                     <tr>
-                        <th scope = "col">TMJ pain</th>
+                        <td>
+                            <img src = "cyst.jpg">
+                            <p scope = "col"><b>Cyst Removal</b></p>
+                        </td>
+                        
+
                         
                     </tr>
                     <tr>
-                        <th scope = "col">Custom Knee Brace</th>
+                        <td>
+                            <img src = "kneeBrace.png">
+                            <p scope = "col" ><b>Custom Knee Brace</b></p>
+                        </td>
+                        
                         
                     </tr>
                     <tr>
-                        <th scope = "col">Surgery</th>
+                        <td>
+                            <img src = "surgery.jpg">
+                            <p scope = "col"><b>Surgery</b></p>
+                        </td>
+                        
                         
                     </tr>
                     <tr>
-                        <th scope = "col">Vaccinations</th>
+                        <td>
+                            <img src = "vaccination.jpg " style="width:625px;height:325px;">
+                            <p scope = "col"><b>Vaccinations</b></p>
+                        </td>
+                        
                         
                     </tr>
                     <tr>
-                        <th scope = "col">Dentistry</th>
+                        <td>
+                            <img src = "Dentistry.jpg">
+                            <p scope = "col"><b>Dentistry</b></p>
+
+                        </td>
+                        
                         
                     </tr>
                 </tbody>
@@ -65,17 +92,20 @@
             <div class = "col-md-4">
                 <img class = "img-fluid pt-4 px-5 pb-1" src = "Doctor.jpg" Alt = "Doctor">
                 <h3>Dr. Anita Bower</h3>
-                <p>Dr. Bower has been practicing medicine for the past 30 years. She has been with us for the past 5 years.</p>
+                <p>Dr. Bower has been practicing medicine for the past 30 years. She has been with us for the past 5 years.</p><br/>
+                <p><b>Dates available: Tuesday, Wednesday, Thursday, Friday, Saturday</b></p>
             </div>
             <div class = "col-md-4">
                 <img class = "img-fluid pt-4 px-5 pb-1" src = "Doctor.jpg" Alt = "Doctor">
                 <h3>Dr. Dennis Power</h3>
-                <p>Dr. Bower has been practicing medicine for the past 20 years. She has been with us for the past 8 years.</p>
+                <p>Dr. Bower has been practicing medicine for the past 20 years. He has been with us for the past 8 years.</p><br/>
+                <p><b>Dates available: Monday, Tuesday, Wednesday, Thursday, Friday</b></p>
             </div>
             <div class = "col-md-4">
                 <img class = "img-fluid pt-4 px-5 pb-1" src = "Doctor.jpg" Alt = "Doctor">
                 <h3>Dr. Mark Korner</h3>
-                <p>Dr. Bower has been practicing medicine for the past 27 years. She has been with us for the past 2 years.</p>
+                <p>Dr. Bower has been practicing medicine for the past 27 years. He has been with us for the past 2 years.</p><br/>
+                <p><b>Dates available: Monday, Tuesday, Wednesday, Saturday, Sunday</b></p>
             </div>
         </div>
     </div>
@@ -90,7 +120,7 @@
                 <h4 >Please Choose the Type of Appointment you want <span style = "color: red;">*</span> </h4>
                 <div class = "btn-group-vertical my-3" role = "group" >
                     <input type = "checkbox" class = "btn-check" id = "btnCheck1" autocomplete="off" >
-                    <label for = "btnCheck1" class = "btn btn-outline-primary">TMJ pain ($200)</label>
+                    <label for = "btnCheck1" class = "btn btn-outline-primary">Cyst Removal ($200)</label>
 
                     <input type = "checkbox" class = "btn-check" id = "btnCheck2" autocomplete="off" >
                     <label for = "btnCheck2" class = "btn btn-outline-primary">Custom Knee Brace($150)</label>
@@ -104,15 +134,18 @@
                     <input type = "checkbox" class = "btn-check" id = "btnCheck5" autocomplete="off" >
                     <label for = "btnCheck5" class = "btn btn-outline-primary">Dentistry ($250)</label>
                 </div>
-                <h4 >Please Choose the Doctor you'd Prefer (optional)</h4>
+                <h4>Please Choose the Doctor you'd Prefer (optional)</h4>
                 <div class = "btn-group-vertical my-3" role = "group">
-                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio1">
+                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio0" value = "none" checked>
+                    <label for = "btnradio0" class = "btn btn-outline-primary">Any</label>
+
+                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio1" value = "bower">
                     <label for = "btnradio1" class = "btn btn-outline-primary">Dr. Anita Bower</label>
 
-                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio2">
+                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio2" value = "power">
                     <label for = "btnradio2" class = "btn btn-outline-primary">Dr. Dennis Power</label>
 
-                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio3">
+                    <input type = "radio" class = "btn-check" name = "drs" autocomplete="off" id = "btnradio3" value = "korner">
                     <label for = "btnradio3" class = "btn btn-outline-primary">Dr. Mark Korner</label>
                 </div>
                 
@@ -137,10 +170,11 @@
                     <p>
                         <label for = "phoneNumber" class = "form-label">Phone Number</label><span style = "color: red;">*</span>
                         <input type = "text" class = "form-control" id = "phoneNumber" name = "info4" required>
+                        <span style = "visibility: hidden; color:red;" id = "phoneError" >This is not a valid phone Number!</span>
                     </p>
                     <p>
                         <label for = "date" class = "form-label" required>Date of appointment </label><span style = "color: red;">*</span>
-                        <input type = "datetime-local" class = "form-control" id = "date" name = "info6" >
+                        <input type = "text" class = "form-control" id = "date" name = "info6" >
                     </p>
                         <div class = "text-center">
                             <button type = "submit" class = "btn btn-primary my-4" id = "procede" onclick = "formCheck()" >Proceed to Payment</button>
@@ -157,48 +191,76 @@
     </div>
 
     <div class="modal fade" id="payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id = "cardInfo">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Please enter the follwing information for payment</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Please enter the following information for payment</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-start">
+                
             
-                 <h6>Card type:</h6>
+                 <h6>Card type: <span style = "color: red;">*</span></h6>
               <div class = "form-check" role = "group">
-                <input type = "radio" class = "form-check-input" name = "drs" autocomplete="off" id = "btnradio1">
-                <label for = "btnradio1" class = "form-check-label">Visa</label><br/>
+                <input type = "radio" class = "form-check-input" name = "drs" autocomplete="off" id = "visaCard">
+                <label for = "visaCard" class = "form-check-label">Visa</label><br/>
 
-                <input type = "radio" class = "form-check-input" name = "drs" autocomplete="off" id = "btnradio2">
-                <label for = "btnradio2" class = "form-check-label">Credit Card</label>
+                <input type = "radio" class = "form-check-input" name = "drs" autocomplete="off" id = "creditCard">
+                <label for = "creditCard" class = "form-check-label">MasterCard</label>
                 <div class = "border-bottom border-2 my-2"></div>
-
-                <label for = "fullName" class = "form-label">Full Name</label>
-                <input type  ="text" class = "form-control" id = "fullName" required>
-
-                <label for = "cNumber" class = "form-label">Card Number</label>
-                <input type  ="text" class = "form-control" id = "lastName" required>
-
-                <label for = "CVV" class = "form-label">CVV</label>
-                <input type  ="number" class = "form-control" id = "CVV" required>
-
-                <label for = "expiry" class = "form-label">Expiry date</label>
-                <input type = "text" class = "form-control" id = "expiry" required>
-            
+                <p>
+                <label for = "fullName" class = "form-label">Full Name Marked on the Card </label><span style = "color: red;">*</span>
+                <input type  ="text" class = "form-control" id = "fullName" name = "card1" required>
+            </p>
+             <p>
+                <label for = "cNumber" class = "form-label">Card Number </label><img id = "cvvTT"src = "Information.png" style = "width:15px;height:15px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 16 digit number on the front of your card"><span style = "color: red;">*</span>
+                <input type  ="number" class = "form-control" id = "cardNum" maxlength="16" name = "card2" required>
+                <span style = "visibility: hidden; color:red;" id = "cardError" >This is not a valid credit card number!</span>
+            </p>
+            <p>
+                <label for = "CVV" class = "form-label">CVV </label><img id = "cvvTT"src = "Information.png" style = "width:15px;height:15px;"  class = "float-start" data-bs-toggle = "tooltip" title="This is the 3 digit number on the back of your card"><span style = "color: red;">*</span>
+                <input type  ="number" class = "form-control" id = "CVV" name = "card3" required>
+                <span style = "visibility: hidden; color:red;" id = "cvvError" >This is not a valid CVV!</span>
+            </p>
+            <p>
+                <label for = "expiry" class = "form-label">Expiry date </label><span style = "color: red;">*</span>
+                <input type = "month" class = "form-control" id = "expiry" name = "card4" required>
+            </p>
              
 
                
             </div>
             </div>
             <div class="modal-footer">
+                <!-- <button style="background: url(Information.png)" style = "width:31px;height:31px;"  class = "float-start" data-bs-toggle="tooltip" data-bs-placement="top" title="Disabled tooltip"></button> -->
+                <img id = "paymentTT"src = "Information.png" style = "width:31px;height:31px;"  class = "float-start" data-bs-toggle = "tooltip" title="This page is so we can more easily process your payment.">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm Reservation</button>
+              <button type="submit" class="btn btn-primary" onclick="cardCheck()" >Confirm Reservation</button>
             </div>
           </div>
         </div>
+    </form>
       </div>
   
+      <div class="modal fade" id="confirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLabel">Reservation Successful!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                
+                
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Return to Main Page</button>
+            </div>
+          </div>
+        </div>
+    
+      </div>
       
    
       
