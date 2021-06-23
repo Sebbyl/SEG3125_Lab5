@@ -59,7 +59,6 @@ $(document).ready(function(){
 
 
 function formCheck(){
-    $("#payment").modal("show")
     
     $("#infoForm").validate({
         invalidHandler: function(){
